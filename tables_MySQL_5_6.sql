@@ -11,7 +11,8 @@ create table if not exists users (
   ,primary key (id)
 ) default charset=utf8
 ;
-insert into users (id, email, first_name, last_name) VALUES
+insert into users (id, email, first_name, last_name) 
+values
   (1, 'email01@gmail.com', 'Esmay', 'Edmonds'),
   (2, 'email02@gmail.com', 'Jayden-James', 'Galvan'),
   (3, 'email03@gmail.com', 'Arfa', 'Andrews'),
@@ -26,6 +27,7 @@ insert into users (id, email, first_name, last_name) VALUES
 
 /* Cart Table
  *  The basic purpose is to hosue any cart, processed or not
+ * Cart Status = created, processed, error
  */
 create table if not exists cart (
   id int(6) unsigned not null
@@ -39,7 +41,13 @@ create table if not exists cart (
   ,primary key (id)
 ) default charset=utf8
 ;
-
+insert into cart (id, user_id, cart_status, cart_created_time, cart_processed_time, utm_source, utm_medium, utm_campaign) 
+values 
+  (1, 1, 'processed', '2020-02-07 16:48:10', '2020-02-07 16:52:19', 'website', 'organic', '2 for 1 deal')
+  ,(2, 2, 'created', '2020-02-22 12:19:22', null, 'email', 'promoted', 'giveaway')
+  ,(3, 3, 'processed', '2020-02-09 10:59:00', '2020-02-09 11:02:17', 'website', 'organic', '2 for 1 deal')
+  ,(4, 4, 'processed', '2020-03-02 04:58:31', '2020-03-02 04:59:59', 'website', 'organic', '2 for 1 deal')
+;
 
 
 /* Cart Item Table
@@ -50,6 +58,12 @@ create table if not exists cart_item (
   ,cart_id int(6) unsigned not null
   ,product varchar(50) not null
   ,revenue double not null
+  ,discount double not null
   ,primary key (id)
 ) default charset=utf8
+;
+insert into cart_item (id, cart_id, product, revenue, discount)
+values
+  (1,1,'hat',10.99,0)
+  ,(2,1,'shirt',9.99,9.99)
 ;
