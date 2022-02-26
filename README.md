@@ -1,9 +1,13 @@
+
 # sql_project_001
-This is just a small quick test to see how to put a basic project together using these GitHub Files and SQL Fiddle
 
-This is set up to use the MySql 5.6 Version for SQL Fiddle: http://sqlfiddle.com/#!9/c20538/1
+Questions for this project are found in the sql_project_001_questions.sql file.  Be sure to copy and save on your own computer, type your answers here or in the web SQL editor below.  The web app does not save your work (that I've seen yet), so I strongly suggest you save your work locally (Copy and Paste are your friend!).  If you don't have an editor on your computer, open and edit in Notepad.
 
-**Using SQL Fiddle:**
-(1) Copy the SQL File that has the query to create the tables and insert the records.  
-(2) Paste the SQL into the left window, then click "Build Schema" 
-(3) Once it's ran successfuly, you can view the schema by clicking on "Browser" or enter your SQL in the right window.
+ 1) Go To: https://franchise.cloud/app/
+ 2) MySQL Lite should be selected on the left, click "Blank Notebook" in the middle of the main screen.
+ 3) Paste the code from tables_sql_project_001.sql into the white text box, then click the green run button at the bottom right
+ 4) Click the + sign at the bottom to create a new White SQL section
+ 5) Type your SQL for one question and click Run, 
+ 6) Once complete, repete step 4 and 5 for each question
+
+Notes: See ERD_sql_project_001.png for the ERD of the 3 tables uses in this project
