@@ -57,12 +57,12 @@ create table if not exists cart_item (
   id int(6) unsigned not null
   ,cart_id int(6) unsigned not null
   ,product varchar(50) not null
-  ,revenue double not null
-  ,discount double not null
+  ,price double not null
+  ,discount_applied double not null
   ,primary key (id)
 ) default charset=utf8
 ;
-insert into cart_item (id, cart_id, product, revenue, discount)
+insert into cart_item (id, cart_id, product, price, discount_applied)
 values
   (1,1,'hat',10.99,0)
   ,(2,1,'shirt',9.99,9.99)
